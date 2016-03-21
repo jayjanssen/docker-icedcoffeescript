@@ -1,19 +1,19 @@
 # docker-coffeescript
 
-Dockerfile for installing CoffeeScript 1.7.1 on Ubuntu 14.04
+Dockerfile for installing IcedCoffeeScript 108.0.9 on Ubuntu 14.04
 
 ## How to use
 
-### Check CoffeeScript version
+### Check IcedCoffeeScript version
 
 ```console
-$ docker run -it --rm shouldbee/coffeescript coffee --version
+$ docker run -it --rm jayjanssen/icedcoffeescript iced --version
 ```
 
 ### Open REPL
 
 ```console
-$ docker run -it --rm shouldbee/coffeescript coffee
+$ docker run -it --rm jayjanssen/coffeescript iced
 ```
 
 ### Work with source codes
@@ -29,14 +29,14 @@ console.log("Hello World!")
 Then you can run it by mounting with `-w` option.
 
 ```console
-$ docker run -it --rm -v `pwd`:/pwd -w /pwd shouldbee/coffeescript coffee hello.coffee
+$ docker run -it --rm -v `pwd`:/pwd -w /pwd jayjanssen/icedcoffeescript iced hello.coffee
 Hello World!
 ```
 
 Also you can compile it.
 
 ```console
-$ docker run -it --rm -v `pwd`:/pwd -w /pwd shouldbee/coffeescript coffee -c hello.coffee
+$ docker run -it --rm -v `pwd`:/pwd -w /pwd jayjanssen/icedcoffeescript iced -c hello.coffee
 ```
 
 ### Tips
@@ -44,5 +44,5 @@ $ docker run -it --rm -v `pwd`:/pwd -w /pwd shouldbee/coffeescript coffee -c hel
 Alias docker command in your .bashrc:
 
 ```
-alias coffee="docker run -it --rm -v `pwd`:/pwd -w /pwd shouldbee/coffeescript coffee"
+alias="docker run -it --rm -v `pwd`:/pwd -w /pwd jayjanssen/icedcoffeescript iced"
 ```
